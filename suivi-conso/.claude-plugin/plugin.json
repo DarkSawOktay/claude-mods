@@ -1,0 +1,32 @@
+{
+  "name": "suivi-conso",
+  "version": "0.2.0",
+  "description": "Usage tracking for Claude Code: 5-hour and weekly quota left, context, session cost, run-out forecast, saving tips, 7-day history and shared themes for every mod. French or English.",
+  "author": {
+    "name": "Oktay Gençer",
+    "url": "https://github.com/DarkSawOktay"
+  },
+  "homepage": "https://github.com/DarkSawOktay/claude-mods/tree/main/suivi-conso",
+  "repository": "https://github.com/DarkSawOktay/claude-mods",
+  "license": "MIT",
+  "keywords": [
+    "usage",
+    "quota",
+    "tokens",
+    "cost",
+    "i18n"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language / Langue",
+      "description": "fr or en",
+      "default": "fr",
+      "options": [
+        "fr",
+        "en"
+      ]
+    }
+  }
+}

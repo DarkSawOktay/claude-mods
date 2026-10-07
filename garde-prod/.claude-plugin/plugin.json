@@ -1,0 +1,56 @@
+{
+  "name": "garde-prod",
+  "version": "0.2.0",
+  "description": "Production guard: flags every command that touches production or is risky (force push, secrets, rm -rf…), checks for a fresh database backup before a production write (can refuse without one), and keeps refused commands ready to run yourself with !. French or English.",
+  "author": {
+    "name": "Oktay Gençer",
+    "url": "https://github.com/DarkSawOktay"
+  },
+  "homepage": "https://github.com/DarkSawOktay/claude-mods/tree/main/garde-prod",
+  "repository": "https://github.com/DarkSawOktay/claude-mods",
+  "license": "MIT",
+  "keywords": [
+    "production",
+    "safety",
+    "backup",
+    "database",
+    "i18n"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Langue / Language",
+      "description": "fr or en",
+      "default": "fr",
+      "options": [
+        "fr",
+        "en"
+      ]
+    },
+    "prodHosts": {
+      "type": "string",
+      "title": "Production hosts",
+      "description": "Hostnames or IPs, comma-separated (e.g. example.com,203.0.113.7)",
+      "default": ""
+    },
+    "backupPattern": {
+      "type": "string",
+      "title": "Backup command",
+      "description": "Regular expression matching your own database backup command, on top of pg_dump, mysqldump, mongodump",
+      "default": ""
+    },
+    "backupMaxAgeMinutes": {
+      "type": "number",
+      "title": "Backup valid for (minutes)",
+      "description": "Past this age, a production database write is flagged “no backup”",
+      "default": 120
+    },
+    "requireBackup": {
+      "type": "boolean",
+      "title": "Require a backup",
+      "description": "Refuse a production database write without a recent backup",
+      "default": false
+    }
+  }
+}

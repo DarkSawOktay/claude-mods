@@ -1,0 +1,44 @@
+{
+  "name": "apk-fraicheur",
+  "version": "0.2.0",
+  "description": "Android APK freshness: is the APK up to date with the code, build in progress and its duration, failures and out-of-memory caught at once, size, copy to another folder. For React Native / Expo / Gradle projects. French or English.",
+  "author": {
+    "name": "Oktay Gençer",
+    "url": "https://github.com/DarkSawOktay"
+  },
+  "homepage": "https://github.com/DarkSawOktay/claude-mods/tree/main/apk-fraicheur",
+  "repository": "https://github.com/DarkSawOktay/claude-mods",
+  "license": "MIT",
+  "keywords": [
+    "android",
+    "apk",
+    "gradle",
+    "expo",
+    "i18n"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language / Langue",
+      "description": "fr or en",
+      "default": "fr",
+      "options": [
+        "fr",
+        "en"
+      ]
+    },
+    "appDir": {
+      "type": "string",
+      "title": "App folder",
+      "description": "React Native / Expo project to follow when the current folder is not one (absolute path)",
+      "default": ""
+    },
+    "copyTo": {
+      "type": "string",
+      "title": "Copy the APK to",
+      "description": "Folder where “/apk copy” puts the APK (e.g. the Windows Downloads folder under /mnt/c)",
+      "default": ""
+    }
+  }
+}

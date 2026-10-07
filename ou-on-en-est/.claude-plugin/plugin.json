@@ -1,0 +1,62 @@
+{
+  "name": "ou-on-en-est",
+  "version": "0.2.0",
+  "description": "Where things stand: every repo's branch, uncommitted and unpushed work, PR and CI; on your server, the deployed commit against main and changes made in place; and whether your pages answer. French or English.",
+  "author": {
+    "name": "Oktay Gençer",
+    "url": "https://github.com/DarkSawOktay"
+  },
+  "homepage": "https://github.com/DarkSawOktay/claude-mods/tree/main/ou-on-en-est",
+  "repository": "https://github.com/DarkSawOktay/claude-mods",
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "github",
+    "deploy",
+    "vps",
+    "i18n"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "language": {
+      "type": "string",
+      "title": "Language / Langue",
+      "description": "fr or en",
+      "default": "fr",
+      "options": [
+        "fr",
+        "en"
+      ]
+    },
+    "projectsRoot": {
+      "type": "string",
+      "title": "Projects folder",
+      "description": "Every git repo directly inside this folder is tracked. Empty: the current project and the repos next to it",
+      "default": ""
+    },
+    "extraRepos": {
+      "type": "string",
+      "title": "Other repos",
+      "description": "Comma-separated paths, on top of the projects folder",
+      "default": ""
+    },
+    "vpsHost": {
+      "type": "string",
+      "title": "Server (ssh)",
+      "description": "ssh host of your server (e.g. deploy@example.com); empty to skip it. Read-only, key-based ssh",
+      "default": ""
+    },
+    "vpsRepos": {
+      "type": "string",
+      "title": "Repos on the server",
+      "description": "name=path on the server, comma-separated; the name matches the local repo, e.g. api=/srv/api",
+      "default": ""
+    },
+    "healthUrls": {
+      "type": "string",
+      "title": "Pages to check",
+      "description": "Comma-separated URLs whose HTTP status is shown",
+      "default": ""
+    }
+  }
+}
